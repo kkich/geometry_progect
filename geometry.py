@@ -1,5 +1,7 @@
-def get_rectangle_area(width, height):
-    return width * height
-
-def get_square_area(side):
-    return side * side
+def get_area(shape, **params):
+    if shape == "rectangle":
+        return params["width"] * params["height"]
+    elif shape == "square":
+        return params["side"] ** 2
+    else:
+        raise ValueError("Unsupported shape")
